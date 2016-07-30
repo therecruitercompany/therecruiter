@@ -1,0 +1,18 @@
+{
+  "name": "projeto-integrador",
+  "version": "0.0.1",
+  "description": "Este trabalho está sendo desenvolvido para o trabalho do Projeto Integrador pela Unicesumar no ano de 2016, com o intuito de ser um embrião para um futuro projeto.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Sanches Fantacucci, João Carlos Thiago Mestti",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "consign": "^0.1.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.7",
+    "mongoose-schema-extend": "^0.2.2"
+  }
+}
