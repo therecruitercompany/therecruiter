@@ -1,0 +1,70 @@
+<div class="row">
+    <br><br>
+    <div class="col s4 offset-s4">
+        <div class="card">
+            <div class="card-content" ng-show="cardLogin">
+                <div class="row">
+                    <center><img class="circle responsive-img" height="70px" width="70px" src="../../assets/img/avatar.png"></center>
+                    <div class="input-field col s10 offset-s1">
+                        <input ng-model="login.accountName" id="AccountName" type="text" autofocus>
+                        <label for="AccountName">Account Name</label>
+                    </div>
+                    <div class="input-field col s10 offset-s1">
+                        <input ng-model="login.password" id="password" type="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="col s10 offset-s1">
+                        <p>
+                            <input class="with-gap" type="checkbox" id="staySigned"/>
+                            <label for="staySigned">Stay signed in</label>
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s10 offset-s1">
+                        <center>
+                            <button ng-click="signIn(login)" class="btn blue waves-effect waves-light" type="submit" name="action">
+                                SIGN IN
+                            </button>
+                        </center>
+                        <br>
+                        <center><a href="" ng-click="changeCard(cardLogin)">Creat an account?</a></center>
+                    </div>
+                </div> 
+            </div>
+            <div class="card-content" ng-show="!cardLogin">
+                <div class="row">
+                    <div class="col s1 offset-s10">
+                        <i class="material-icons" ng-click="changeCard(cardLogin)">clear</i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s10 offset-s1">
+                        <input ng-model="createAccount.accountName" id="newAccountName" type="text">
+                        <label for="newAccountName">Account Name</label>
+                    </div>
+                    <div class="input-field col s10 offset-s1">
+                        <input ng-model="createAccount.password" id="newPassword" type="password">
+                        <label for="newPassword">Password</label>
+                    </div>
+                    <div class="input-field col s10 offset-s1">
+                        <input ng-model="createAccount.repeatPassword" id="Repeat Password" type="password">
+                        <label for="Repeat Password">Repeat Password</label>
+                    </div>
+                    <div class="input-field col s10 offset-s1">
+                        <input ng-model="createAccount.email" id="email" type="text">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <center>
+                        <button ng-click="signUp(createAccount)" class="btn blue waves-effect waves-light" type="submit">
+                            SIGN UP
+                        </button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
