@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col s3">
+        <ul class="side-nav fixed">
+            <li>
+                <div class="userView grey lighten-3">
+                    <a href="#!user"><img class="circle" src="assets/img/avatar.png"></a>
+                    <a href="#!name"><span class="name" ng-bind="teste"></span></a>
+                    <a href="#!email"><span class="email">lucasfantacuci@gmail.com</span></a>
+                </div>
+            </li>
+            <div>
+                <li><a href="" ui-sref="user.home"><i class="material-icons">home</i>Home</a></li>
+                <li><a href="" ui-sref="user.find"><i class="material-icons">find_in_page</i>Find</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="col s9" ui-view></div>
+</div>
