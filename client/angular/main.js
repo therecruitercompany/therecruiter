@@ -1,32 +1,32 @@
-angular.module('therecruiter', ["ui.router", "ngRoute"])
+angular.module('therecruiter', ["ui.router"])
     .config(function ($stateProvider, $urlRouterProvider){
 
-        $urlRouterProvider
-                .otherwise('/login');
+        $urlRouterProvider.otherwise("/index");
 
         $stateProvider
-            .state('login', 
-                {
-                    url: '/login',
-                    views: 
-                        {
-                            'body-view': 
-                                {
-                                    templateUrl: 'angular/templates/login.html',
-                                    controller : 'SingInUpController'
-                                }
-                        }
-                })
             .state('index',
                 {
                     url: '/index',
-                    views: 
-                        {
-                            'body-view':
-                                {
-                                    templateUrl: 'angular/templates/index.html'
-                                }
-                        }
+                    controller: 'IndexController',
+                    templateUrl: 'angular/templates/index.html'
                 })
-    
+            .state('user',
+                {
+                    abstract: true,
+                    url:'/user',
+                    controller: function($scope){
+                        $scope.teste = 'Lucas';
+                    },
+                    templateUrl: 'angular/templates/menu.html'
+                })
+            .state('user.home',
+                {
+                    url: '/',
+                    templateUrl: 'angular/templates/find.html'
+                })
+            .state('user.find',
+                {
+                    url: '/find',
+                    templateUrl: 'angular/templates/find.html'
+                })
 })

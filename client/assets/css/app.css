@@ -39,3 +39,8 @@
    .input-field .prefix.active {
      color: #2196f3;
    }
+
+   .modal {
+     overflow-y: hidden;
+     max-height: 100%;
+   }
